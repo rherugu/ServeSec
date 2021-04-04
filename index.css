@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 9vh;
+}
+
+.logo {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    
+    animation: 1s ease-out 0s 1 fade;
+}
+
+.mainInfo {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainInfo h3 {
+    text-align: center;
+    font-size: 17px;
+    width: 65%;
+}
+
+.mainInfo h1 {
+    text-align: center;
+    font-size: 50px;
+    width: 75%;
+    font-weight: bold;
+}
+
+
+.calltoaction {
+    margin-top: 25px;
+    height: 74px;
+    width: 200px;
+    background-color: rgb(44, 75, 255);
+    font-size: 18px;
+    color: white;
+    letter-spacing: 0.3px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    border: none;
+    transition: all 250ms;
+    margin-bottom: 50px;
+}
+
+.calltoaction:hover {
+    background-color: rgb(39, 70, 250);
+    box-shadow: 0px 6px 25px rgba(44, 76, 255, 0.486);
+    cursor: pointer;
+}
+
+.calltoaction:active {
+    background-color: rgb(39, 70, 250);
+    transform:  translateY(5px);
+    box-shadow: 0px 9px 25px rgba(44, 76, 255, 0.486);
+    cursor: pointer;
+}
+
+.svg {
+    height: 500px;
+    position: absolute;
+    top: 25vh;
+    right: -7vw;
+    animation: 1s ease-out 0s 1 slideRight;
+}
+.svg2 {
+    height: 250px;
+    position: absolute;
+    top: 37.5vh;
+    left: -7vw;
+    animation: 1s ease-out 0s 1 slideleft;
+}
+
+.svg3 {
+    display: none;
+}
+
+.hamburger, .hamburgericon {
+    display: none;
+}
+
+.hamburger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgb(44, 75, 255);
+  color: white;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  list-style: none;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.menuhamburger, .menuhamburger li {
+    display: inline;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 0;
+}
+
+.hamburger li {
+    font-weight: bold;
+}
+
+.showMenu {
+    transform: translateY(0);
+}
+
+.xIcon {
+    display: none;
+}
+
+@media only screen and (max-width: 1433px) {
+    .svg {
+        height: 250px;
+        top: 37.5vh;
+        right: -2vw;
+    }
+    .svg2 {
+        height: 200px;
+        top: 40.5vh;
+    }
+}
+
+@media only screen and (max-width: 1175px) {
+    .svg2 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1175px) {
+    .svg {
+        display: none;
+    }
+    .svg3 {
+        display: flex;
+        height: 150px;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (min-width: 1059px) {
+    .hamburgericon {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 1059px) {
+    .nav-links {
+        display: none;
+    }
+    .hamburgericon {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .hamburger li {
+        list-style: none;
+    }
+    
+    .hamburger a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-height: 735px) {
+    .svg3 {
+        display: none !important;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideleft {
+    0% {
+        transform: translateX(-10%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(10%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+}
